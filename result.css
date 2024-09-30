@@ -1,0 +1,199 @@
+body{
+    background-color: #FFC30B;
+}
+h1{
+    color: black;
+    font-family: inter;
+    font-style: italic;
+    font-weight: 700;
+    text-shadow: 0px 4px 9px #1e1a1485;
+    font-size: 75px;
+}
+#beeIcon{
+  width: 6vw;
+  margin-left: 10px;
+}
+p{
+    font-family: inter;
+    font-style: italic;
+    font-weight: 800;
+    margin-left: 27px;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    background: linear-gradient(135deg, #FFC30B, #fff300);
+    overflow-x: hidden;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Add wavy melting shapes */
+  body:before, body:after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 45vh;
+    top: 0;
+    left: -50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 70%);
+    animation: melt 5s ease-in-out infinite;
+    opacity: 0.6;
+    z-index: -1;
+  }
+
+  body:after {
+    animation: melt 8s ease-in-out infinite;
+    opacity: 0.3;
+    z-index: -1;
+  }
+
+  /* Melting animation keyframes */
+  @keyframes melt {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(0, 10%) rotate(5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+  }
+
+  .button{
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+
+  #uploadImg{
+    width: 25vw;
+    z-index: 2;
+  }
+  #uploadImg:hover{
+  cursor:pointer;
+  }
+  #belowPara{
+    font-weight: 500;
+    font-size: 27px;
+  }
+  
+  .footer {
+    background-color: #343a40; /* Dark background */
+    color: white; /* White text */
+    padding: 20px 0;
+    max-height: 100vh;
+  }
+  
+  .footer ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .footer ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  .footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons a {
+    font-size: 1.5rem;
+    padding: 0 10px;
+  }
+  
+
+  /* Media Queries for Mobile */
+@media only screen and (max-width: 425px) {
+  body {
+    overflow: hidden; /* Disable vertical scrolling on mobile */
+  }
+  h1 {
+      font-size: 6vw; /* Smaller heading for mobile */
+  }
+  body:before, body:after {
+    height: 100vh; /* Adjust this to fit within the viewport */
+    overflow: hidden; /* Prevent overflow from these elements */
+  }
+  #beeIcon {
+      width: 12vw; /* Scale icon for mobile */
+  }
+
+  #uploadImg { 
+    width: 91vw;
+    padding-top: 39px;/* Larger image width for mobile */
+  }
+
+  #belowPara {
+      font-size: 4.5vw; /* Adjust font size for mobile */
+  }
+  .footer{
+
+  }
+
+  .footer ul li {
+      display: block; /* Stack footer links on mobile */
+      margin: 10px 0;
+  }
+
+  .social-icons a {
+      font-size: 1.2rem; /* Adjust icon size */
+  }
+}
+
+.btn-container{
+    padding: 9px;
+}
+
+.btnHome{
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.img-name-cont{
+  width: 19vw;
+    color: white;
+    position: fixed;
+    top: 84%;
+    right: 0px;
+    transform: translateY(-42%);
+    background-color: black;
+    padding: 10px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 98px 0px 0px 0px;
+}
+
+.img-name-cont h3{
+  padding-left: 53px;
+}
+
+.out-name-cont{
+  border-radius: 0px 75px 0px 0px;
+    border: -1px solid white;
+    width: 19vw;
+    color: white;
+    position: fixed;
+    top: 40%;
+    left: 0px;
+    transform: translateY(-42%);
+    background-color: black;
+    padding: 10px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.cont-two{
+  padding-top: 8%;
+    width: 22vw;
+    border-radius: 13px;
+}
+.cont-two h5{font-family: auto;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 34px;
+  letter-spacing: 6px;
+}
